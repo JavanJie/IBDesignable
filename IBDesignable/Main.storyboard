@@ -1,12 +1,51 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bhb-zP-uO1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="8rH-4m-Qmk">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Blur Image View Controller-->
+        <scene sceneID="ymo-bV-xDC">
+            <objects>
+                <viewController id="8rH-4m-Qmk" customClass="BlurImageViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0xo-DX-4h1"/>
+                        <viewControllerLayoutGuide type="bottom" id="YmU-qM-AEt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="m2N-5e-3xl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TC5-Rj-Wci" customClass="GLKView">
+                                <frame key="frameInset" maxY="56"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="0.1001910607" green="0.044655327379999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="wDK-Hx-at7">
+                                <frame key="frameInset" minX="6" height="31" maxX="6" maxY="17"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <action selector="blurValueChanged:" destination="8rH-4m-Qmk" eventType="valueChanged" id="IIh-ee-1yt"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.96120878060000003" blue="0.01976657553" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="image" keyPath="image" value="cheetah"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="glView" destination="TC5-Rj-Wci" id="ob7-zb-4um"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZTA-IF-iCF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1349.5999999999999" y="341.37931034482762"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="w5P-7y-2mQ">
             <objects>
@@ -16,15 +55,12 @@
                         <viewControllerLayoutGuide type="bottom" id="Hcg-Oc-t8j"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="4IO-eW-l3C" customClass="RoundableView">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cheetah" translatesAutoresizingMaskIntoConstraints="NO" id="gFC-ru-5Ag" customClass="IBDesignableImageView">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cheetah" translatesAutoresizingMaskIntoConstraints="NO" id="gFC-ru-5Ag" customClass="IBDesignableImageView"/>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pzK-AQ-nSm" customClass="RoundableView">
-                                <rect key="frame" x="180" y="20" width="240" height="128"/>
-                                <color key="backgroundColor" red="0.0" green="1" blue="0.0029838941309999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.0029838941309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="pzK-AQ-nSm" secondAttribute="height" multiplier="15:8" id="JXj-tv-HdB"/>
                                     <constraint firstAttribute="width" constant="240" id="JuC-bm-cWO"/>
@@ -34,10 +70,10 @@
                                         <real key="value" value="17"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                        <color key="value" red="0.73493256609760649" green="1" blue="0.69806192974194137" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="0.73493256609760649" green="1" blue="0.69806192974194137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
                                         <real key="value" value="4"/>
@@ -55,13 +91,11 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="9H5-HB-HNT">
-                                <rect key="frame" x="18" y="562" width="564" height="31"/>
                                 <connections>
                                     <action selector="blurRadiusChanged:" destination="bhb-zP-uO1" eventType="valueChanged" id="Fij-JE-bTH"/>
                                 </connections>
                             </slider>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Idg-nE-b0m" customClass="RoundableButton">
-                                <rect key="frame" x="197" y="260" width="207" height="79"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="79" id="jPV-KV-Uij"/>
                                     <constraint firstAttribute="width" constant="207" id="qu8-Gg-Rkx"/>
@@ -76,16 +110,16 @@
                                         <point key="value" x="1" y="1"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="gradientStartColor">
-                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="gradientEndColor">
-                                        <color key="value" red="0.0" green="1" blue="0.0029838941309999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="0.0" green="1" blue="0.0029838941309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                         <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
@@ -93,7 +127,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="gFC-ru-5Ag" firstAttribute="top" secondItem="fmm-2h-cVg" secondAttribute="bottom" constant="-20" id="20d-x5-ls5"/>
                             <constraint firstItem="gFC-ru-5Ag" firstAttribute="leading" secondItem="4IO-eW-l3C" secondAttribute="leading" id="297-uD-5Cq"/>
@@ -119,10 +153,10 @@
                                 <point key="value" x="0.5" y="1"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="color" keyPath="gradientStartColor">
-                                <color key="value" red="1" green="0.034777699400000001" blue="0.97054539070000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="value" red="1" green="0.034777699400000001" blue="0.97054539070000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="color" keyPath="gradientEndColor">
-                                <color key="value" red="0.0" green="1" blue="0.0029838941309999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="value" red="0.0" green="1" blue="0.0029838941309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                         <variation key="default">

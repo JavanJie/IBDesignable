@@ -67,16 +67,24 @@
 
 - (void)blurImage:(UIImage *)originalImage withRadius:(CGFloat)blurRadius {
     
-    CIImage *inputImage = [CIImage imageWithCGImage:[originalImage CGImage]];
+    CIImage *inputImage = nil;
+    if ([originalImage CGImage]) {
+    inputImage = [CIImage imageWithCGImage:[originalImage CGImage]];
+    } else {
+        inputImage = originalImage.CIImage;
+    }
     [self.gaussianBlurFilter setValue:inputImage forKey:kCIInputImageKey];
     [self.gaussianBlurFilter setValue:@(blurRadius) forKey:kCIInputRadiusKey];
     
     CIImage *outputImage = [self.gaussianBlurFilter outputImage];
     
-    _rectInPixels = CGRectMake(0.0, 0.0, _glkView.drawableWidth, _glkView.drawableHeight);
+//    _rectInPixels = CGRectMake(0.0, 0.0, _glkView.drawableWidth, _glkView.drawableHeight);
+//    
+//    [self.context drawImage:outputImage inRect:self.rectInPixels fromRect:inputImage.extent];
+//    [self.glkView display];
     
-    [self.context drawImage:outputImage inRect:self.rectInPixels fromRect:inputImage.extent];
-    [self.glkView display];
+    UIImage *blurImage = [UIImage imageWithCIImage:outputImage scale:originalImage.scale orientation:originalImage.imageOrientation];
+    self.image = blurImage;
 }
 
 
