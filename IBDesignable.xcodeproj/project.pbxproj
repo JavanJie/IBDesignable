@@ -15,11 +15,10 @@
 		F521F4321D804084000F2C85 /* RoundableView.m in Sources */ = {isa = PBXBuildFile; fileRef = F521F4311D804084000F2C85 /* RoundableView.m */; };
 		F521F4391D8046AC000F2C85 /* UIView+IBDesignable.m in Sources */ = {isa = PBXBuildFile; fileRef = F521F4381D8046AC000F2C85 /* UIView+IBDesignable.m */; };
 		F521F45C1D805062000F2C85 /* RoundableButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F521F45B1D805062000F2C85 /* RoundableButton.m */; };
-		F5B63C7B1D9628E80082AD75 /* BlurImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5B63C7A1D9628E80082AD75 /* BlurImageViewController.m */; };
 		F5CB89711D94F52600C45415 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5CB89701D94F52600C45415 /* Main.storyboard */; };
-		F5CB89741D95508F00C45415 /* UIImageView+IBDesignable.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CB89731D95508F00C45415 /* UIImageView+IBDesignable.m */; };
-		F5CB89771D95516B00C45415 /* IBDesignableImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CB89761D95516B00C45415 /* IBDesignableImageView.m */; };
+		F5CB89771D95516B00C45415 /* IBDImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CB89761D95516B00C45415 /* IBDImageView.m */; };
 		F5CB89791D9551D000C45415 /* cheetah1136.png in Resources */ = {isa = PBXBuildFile; fileRef = F5CB89781D9551D000C45415 /* cheetah1136.png */; };
+		F5D1B3BA1D97F93A001F831C /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5D1B3B91D97F93A001F831C /* Storyboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,14 +37,11 @@
 		F521F4381D8046AC000F2C85 /* UIView+IBDesignable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+IBDesignable.m"; sourceTree = "<group>"; };
 		F521F45A1D805062000F2C85 /* RoundableButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoundableButton.h; sourceTree = "<group>"; };
 		F521F45B1D805062000F2C85 /* RoundableButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoundableButton.m; sourceTree = "<group>"; };
-		F5B63C791D9628E80082AD75 /* BlurImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlurImageViewController.h; sourceTree = "<group>"; };
-		F5B63C7A1D9628E80082AD75 /* BlurImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlurImageViewController.m; sourceTree = "<group>"; };
 		F5CB89701D94F52600C45415 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		F5CB89721D95508F00C45415 /* UIImageView+IBDesignable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+IBDesignable.h"; sourceTree = "<group>"; };
-		F5CB89731D95508F00C45415 /* UIImageView+IBDesignable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+IBDesignable.m"; sourceTree = "<group>"; };
-		F5CB89751D95516B00C45415 /* IBDesignableImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBDesignableImageView.h; sourceTree = "<group>"; };
-		F5CB89761D95516B00C45415 /* IBDesignableImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBDesignableImageView.m; sourceTree = "<group>"; };
+		F5CB89751D95516B00C45415 /* IBDImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBDImageView.h; sourceTree = "<group>"; };
+		F5CB89761D95516B00C45415 /* IBDImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBDImageView.m; sourceTree = "<group>"; };
 		F5CB89781D9551D000C45415 /* cheetah1136.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cheetah1136.png; sourceTree = "<group>"; };
+		F5D1B3B91D97F93A001F831C /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,18 +78,15 @@
 				F521F41D1D804012000F2C85 /* AppDelegate.m */,
 				F521F41F1D804012000F2C85 /* ViewController.h */,
 				F521F4201D804012000F2C85 /* ViewController.m */,
-				F5B63C791D9628E80082AD75 /* BlurImageViewController.h */,
-				F5B63C7A1D9628E80082AD75 /* BlurImageViewController.m */,
 				F521F4301D804084000F2C85 /* RoundableView.h */,
 				F521F4311D804084000F2C85 /* RoundableView.m */,
 				F521F45A1D805062000F2C85 /* RoundableButton.h */,
 				F521F45B1D805062000F2C85 /* RoundableButton.m */,
-				F5CB89751D95516B00C45415 /* IBDesignableImageView.h */,
-				F5CB89761D95516B00C45415 /* IBDesignableImageView.m */,
+				F5CB89751D95516B00C45415 /* IBDImageView.h */,
+				F5CB89761D95516B00C45415 /* IBDImageView.m */,
 				F521F4371D8046AC000F2C85 /* UIView+IBDesignable.h */,
 				F521F4381D8046AC000F2C85 /* UIView+IBDesignable.m */,
-				F5CB89721D95508F00C45415 /* UIImageView+IBDesignable.h */,
-				F5CB89731D95508F00C45415 /* UIImageView+IBDesignable.m */,
+				F5D1B3B91D97F93A001F831C /* Storyboard.storyboard */,
 				F5CB89701D94F52600C45415 /* Main.storyboard */,
 				F521F4251D804012000F2C85 /* Assets.xcassets */,
 				F5CB89781D9551D000C45415 /* cheetah1136.png */,
@@ -175,6 +168,7 @@
 				F521F4261D804012000F2C85 /* Assets.xcassets in Resources */,
 				F5CB89711D94F52600C45415 /* Main.storyboard in Resources */,
 				F5CB89791D9551D000C45415 /* cheetah1136.png in Resources */,
+				F5D1B3BA1D97F93A001F831C /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,12 +180,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F521F4391D8046AC000F2C85 /* UIView+IBDesignable.m in Sources */,
-				F5CB89771D95516B00C45415 /* IBDesignableImageView.m in Sources */,
+				F5CB89771D95516B00C45415 /* IBDImageView.m in Sources */,
 				F521F4211D804012000F2C85 /* ViewController.m in Sources */,
 				F521F4321D804084000F2C85 /* RoundableView.m in Sources */,
 				F521F41E1D804012000F2C85 /* AppDelegate.m in Sources */,
-				F5B63C7B1D9628E80082AD75 /* BlurImageViewController.m in Sources */,
-				F5CB89741D95508F00C45415 /* UIImageView+IBDesignable.m in Sources */,
 				F521F45C1D805062000F2C85 /* RoundableButton.m in Sources */,
 				F521F41B1D804012000F2C85 /* main.m in Sources */,
 			);

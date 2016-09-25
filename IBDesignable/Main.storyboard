@@ -1,178 +1,69 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="8rH-4m-Qmk">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="4U7-cG-opu">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Blur Image View Controller-->
-        <scene sceneID="ymo-bV-xDC">
-            <objects>
-                <viewController id="8rH-4m-Qmk" customClass="BlurImageViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="0xo-DX-4h1"/>
-                        <viewControllerLayoutGuide type="bottom" id="YmU-qM-AEt"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="m2N-5e-3xl">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TC5-Rj-Wci" customClass="GLKView">
-                                <frame key="frameInset" maxY="56"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" red="0.1001910607" green="0.044655327379999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="wDK-Hx-at7">
-                                <frame key="frameInset" minX="6" height="31" maxX="6" maxY="17"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <connections>
-                                    <action selector="blurValueChanged:" destination="8rH-4m-Qmk" eventType="valueChanged" id="IIh-ee-1yt"/>
-                                </connections>
-                            </slider>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="0.96120878060000003" blue="0.01976657553" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="image" keyPath="image" value="cheetah"/>
-                    </userDefinedRuntimeAttributes>
-                    <connections>
-                        <outlet property="glView" destination="TC5-Rj-Wci" id="ob7-zb-4um"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZTA-IF-iCF" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1349.5999999999999" y="341.37931034482762"/>
-        </scene>
         <!--View Controller-->
-        <scene sceneID="w5P-7y-2mQ">
+        <scene sceneID="47M-jf-z76">
             <objects>
-                <viewController id="bhb-zP-uO1" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="4U7-cG-opu" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="fmm-2h-cVg"/>
-                        <viewControllerLayoutGuide type="bottom" id="Hcg-Oc-t8j"/>
+                        <viewControllerLayoutGuide type="top" id="Lsd-uc-iWK"/>
+                        <viewControllerLayoutGuide type="bottom" id="L5S-kW-XHP"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="4IO-eW-l3C" customClass="RoundableView">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <view key="view" contentMode="scaleToFill" id="99L-VB-MLr">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cheetah" translatesAutoresizingMaskIntoConstraints="NO" id="gFC-ru-5Ag" customClass="IBDesignableImageView"/>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pzK-AQ-nSm" customClass="RoundableView">
-                                <color key="backgroundColor" red="0.0" green="1" blue="0.0029838941309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="pzK-AQ-nSm" secondAttribute="height" multiplier="15:8" id="JXj-tv-HdB"/>
-                                    <constraint firstAttribute="width" constant="240" id="JuC-bm-cWO"/>
-                                </constraints>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cheetah" translatesAutoresizingMaskIntoConstraints="NO" id="zeF-as-kNf" customClass="IBDImageView">
+                                <frame key="frameInset" minY="-1" maxY="1"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="blurRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cheetah" translatesAutoresizingMaskIntoConstraints="NO" id="wM1-vH-SoJ" customClass="IBDImageView">
+                                <frame key="frameInset" minX="40" width="240" height="128.5" maxY="107"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="semicircle" value="NO"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="17"/>
+                                        <real key="value" value="2"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                        <color key="value" red="0.73493256609760649" green="1" blue="0.69806192974194137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                        <real key="value" value="4"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                        <real key="value" value="4"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="point" keyPath="shadowOffset">
-                                        <point key="value" x="8" y="6"/>
+                                        <color key="value" red="1" green="0.57062914099999995" blue="0.52269003780000001" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="10"/>
+                                        <real key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="semicircle" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="blurRadius">
+                                        <real key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                            </view>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="9H5-HB-HNT">
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="30" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="6Nl-b8-CXE">
+                                <frame key="frameInset" minX="14" height="31.5" maxX="14" maxY="7"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
-                                    <action selector="blurRadiusChanged:" destination="bhb-zP-uO1" eventType="valueChanged" id="Fij-JE-bTH"/>
+                                    <action selector="blurRadiusChanged:" destination="4U7-cG-opu" eventType="valueChanged" id="BYu-cd-ckz"/>
                                 </connections>
                             </slider>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Idg-nE-b0m" customClass="RoundableButton">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="79" id="jPV-KV-Uij"/>
-                                    <constraint firstAttribute="width" constant="207" id="qu8-Gg-Rkx"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="semicircle" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="point" keyPath="gradientStartPoint">
-                                        <point key="value" x="0.0" y="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="point" keyPath="gradientEndPoint">
-                                        <point key="value" x="1" y="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="gradientStartColor">
-                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="gradientEndColor">
-                                        <color key="value" red="0.0" green="1" blue="0.0029838941309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="buttonTouched:" destination="bhb-zP-uO1" eventType="touchUpInside" id="Dzm-Bq-t7u"/>
-                                </connections>
-                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="gFC-ru-5Ag" firstAttribute="top" secondItem="fmm-2h-cVg" secondAttribute="bottom" constant="-20" id="20d-x5-ls5"/>
-                            <constraint firstItem="gFC-ru-5Ag" firstAttribute="leading" secondItem="4IO-eW-l3C" secondAttribute="leading" id="297-uD-5Cq"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="9H5-HB-HNT" secondAttribute="leading" id="4QU-Up-pRx"/>
-                            <constraint firstItem="Hcg-Oc-t8j" firstAttribute="top" secondItem="gFC-ru-5Ag" secondAttribute="bottom" id="7QG-TD-6qe"/>
-                            <constraint firstItem="Hcg-Oc-t8j" firstAttribute="top" secondItem="9H5-HB-HNT" secondAttribute="bottom" constant="8" id="9al-jh-Gmq"/>
-                            <constraint firstItem="gFC-ru-5Ag" firstAttribute="leading" secondItem="4IO-eW-l3C" secondAttribute="leadingMargin" constant="-8" id="EiO-QU-7sZ"/>
-                            <constraint firstItem="pzK-AQ-nSm" firstAttribute="top" secondItem="fmm-2h-cVg" secondAttribute="bottom" id="Ha0-uh-WNs"/>
-                            <constraint firstItem="Idg-nE-b0m" firstAttribute="centerX" secondItem="4IO-eW-l3C" secondAttribute="centerX" id="Hys-x4-HJY"/>
-                            <constraint firstItem="Idg-nE-b0m" firstAttribute="centerY" secondItem="4IO-eW-l3C" secondAttribute="centerY" id="KHl-nb-LV8"/>
-                            <constraint firstItem="pzK-AQ-nSm" firstAttribute="centerX" secondItem="4IO-eW-l3C" secondAttribute="centerX" id="eJs-gG-tpR"/>
-                            <constraint firstItem="Hcg-Oc-t8j" firstAttribute="top" secondItem="gFC-ru-5Ag" secondAttribute="bottom" id="ede-QL-Dpa"/>
-                            <constraint firstItem="gFC-ru-5Ag" firstAttribute="top" secondItem="4IO-eW-l3C" secondAttribute="top" id="gE2-gl-fbh"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="gFC-ru-5Ag" secondAttribute="trailing" constant="-8" id="h8x-cJ-Zdw"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="9H5-HB-HNT" secondAttribute="trailing" id="ov9-8n-ZJC"/>
-                            <constraint firstAttribute="trailing" secondItem="gFC-ru-5Ag" secondAttribute="trailing" id="ssG-ra-d2d"/>
-                        </constraints>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="point" keyPath="gradientStartPoint">
-                                <point key="value" x="0.5" y="-0.5"/>
-                            </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="point" keyPath="gradientEndPoint">
-                                <point key="value" x="0.5" y="1"/>
-                            </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="color" keyPath="gradientStartColor">
-                                <color key="value" red="1" green="0.034777699400000001" blue="0.97054539070000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="color" keyPath="gradientEndColor">
-                                <color key="value" red="0.0" green="1" blue="0.0029838941309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="EiO-QU-7sZ"/>
-                                <exclude reference="h8x-cJ-Zdw"/>
-                            </mask>
-                        </variation>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="blurImageView" destination="gFC-ru-5Ag" id="1Qs-k7-uTL"/>
+                        <outlet property="blurImageView" destination="zeF-as-kNf" id="jdn-ec-RJ3"/>
+                        <outlet property="blurSliderView" destination="6Nl-b8-CXE" id="Oga-Bp-uHp"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yrd-bS-auN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ri8-Wk-PEg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="512" y="343"/>
+            <point key="canvasLocation" x="-5.625" y="134.1549295774648"/>
         </scene>
     </scenes>
     <resources>
